@@ -67,12 +67,6 @@ class Application(Frame):
 
         self.submit_button = Button(self, text = " Camera  ", command = self.Use_Camera)
         self.submit_button.grid(row = 2, column = 2, sticky = W)
-
-        self.submit_button = Button(self, text = "           GPS On           ", command = self.Turn_GPS_on)
-        self.submit_button.grid(row = 2, column = 3, sticky = W)
-        
-        self.submit_button = Button(self, text = "           GPS Off           ", command = self.Turn_GPS_off)
-        self.submit_button.grid(row = 3, column = 3, sticky = W)
         
         self.text1 = Text(self, width = 50, height = 25, wrap = WORD)
         self.text1.grid(row = 4, column = 0, columnspan = 2)
@@ -106,11 +100,6 @@ class Application(Frame):
 
                 os.system('sudo python3 Record_Vid.py')
                 
-    def Turn_GPS_on(self):
-        _4G.StartGPS_S(0)
-    def Turn_GPS_off(self):
-        _4G.StopGPS()
-        
     def Make_Call(self):
         self.call = self.e.get()
         _4G.MakeCall(self.call)

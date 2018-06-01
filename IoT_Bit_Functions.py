@@ -5,7 +5,6 @@ from tkinter import *
 from datetime import datetime
 import picamera
 import serial
-import time
 import struct
 import subprocess
 import RPi.GPIO as GPIO
